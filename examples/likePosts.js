@@ -16,10 +16,14 @@ const Amino = require('../index');
     	community = yourCommunities.coms[0].id;
     }
     
-    let recentBlogs = await Amino.getComBlogFeed(community, 0, 100);
+    let recentBlogs = await Amino.getComBlogFeed(community, 0, 25);
+
+    console.log(recentBlogs);
 
     for (const someBlog of recentBlogs.blogs) {
-    	console.log(await Amino.likeBlog(community, someBlog.blogId));
+    	if(!someBlog.liked) {
+    		console.log(await Amino.likeBlog(community, someBlog.blogId));
+    	}
     }
     
 })();

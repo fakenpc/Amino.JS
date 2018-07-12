@@ -76,6 +76,7 @@ module.exports = {
             'createdTime': element.createdTime,
             'likeCount': element.votesCount,
             'commentsCount': element.commentsCount,
+            'liked': element.votedValue == 4 ? 1 : 0,
             'author': element.author
         };
     },
