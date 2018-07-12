@@ -5,6 +5,7 @@ const Amino = require('../index');
     const sid = await Amino.login(env.email, env.password);
     const yourCommunities = await Amino.getJoinedComs();
     let community;
+    let recentBlogs;
 
     for(const yourCommunity of yourCommunities.coms) {
     	if(yourCommunity.id == "x156542274") {
@@ -16,14 +17,19 @@ const Amino = require('../index');
     	community = yourCommunities.coms[0].id;
     }
     
-    let recentBlogs = await Amino.getComBlogFeed(community, 0, 100);
+    while (true) {
+    	recentBlogs = await Amino.getComBlogFeed(community, 0, 100);
+	    console.log(recentBlogs);
 
-    console.log(recentBlogs);
+	    for (const someBlog of recentBlogs.blogs) {
+	    	if(!someBlog.liked) {
+	    		let likeBlogRes = await Amino.likeBlog(community, someBlog.blogId);
+	    		console.log('like: ' + ' ' + someBlog.blogId + ' ' + someBlog.title + ' ' + likeBlogRes.status);
+	    	}
+	    }
 
-    for (const someBlog of recentBlogs.blogs) {
-    	if(!someBlog.liked) {
-    		console.log(await Amino.likeBlog(community, someBlog.blogId));
-    	}
+		await new Promise(resolve => setTimeout(resolve, 60000));
     }
+    
     
 })();
