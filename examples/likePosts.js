@@ -16,7 +16,7 @@ const Amino = require('../index');
     	community = yourCommunities.coms[0].id;
     }
     
-    let recentBlogs = await Amino.getComBlogFeed(community, 0, 25);
+    let recentBlogs = await Amino.getComBlogFeed(community, 0, 100);
 
     console.log(recentBlogs);
 

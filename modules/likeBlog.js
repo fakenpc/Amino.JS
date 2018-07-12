@@ -31,8 +31,6 @@ module.exports = async function likeBlog(com, id) {
         });
         response = await response.json();
 
-        console.log(response);
-
         if (response['api:message'] == 'OK') {
             likeBlog.status = 'ok';
             likeBlog.error = null;
