@@ -8,7 +8,6 @@ const { getConfig } = require('../index');
  * Function to like a blog.
  * @param {CommunityUUID} com The Community ID that can be Obtained by the Function getJoinedComs
  * @param {String} id The id of the blog
- * @param {String} content The content of the post
  * @returns {Object} The raw JSON parsed from Amino API
  */
 
