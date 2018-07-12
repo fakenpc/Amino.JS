@@ -7,7 +7,7 @@ module.exports = {
     upload: prefix + '/v1/g/s/media/upload',
     getJoinedChats: (com) => `${prefix}/v1/${com}/s/chat/thread?type=joined-me&start=0&size=100`,
     loadChat: (com, uuid, count) => `${prefix}/v1/${com}/s/chat/thread/${uuid}/message?start=0&size=${count}&cv=v1.2`,
-    postBlog: (com)=> `${prefix}/v1/${com}/s/blog/`,
+    postBlog: (com) => `${prefix}/v1/${com}/s/blog/`,
     deleteBlog: (com, id)=> `${prefix}/v1/${com}/s/blog/${id}`,
     commentsPost: (com, id, sort, start, size)=> `${prefix}/v1/${com}/s/blog/${id}/comment?sort=${sort}&start=${start}&size=${size}`,
     commentPost: (com, id)=> `${prefix}/v1/${com}/s/blog/${id}/comment`,
@@ -17,5 +17,6 @@ module.exports = {
     checkIfWikiCanPost: (com, uuid) => `${prefix}/v1/${com}/s/user-profile/${uuid}/compose-eligible-check?objectType=item`,
     createWiki: (com) => `${prefix}/v1/${com}/s/item`,
     deleteWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}`,
-    commentWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}/comment`
+    commentWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}/comment`,
+    likeBlog: (com, id) => `${prefix}/v1/${com}/s/blog/${id}/vote?cv=1.2&value=4`
 };

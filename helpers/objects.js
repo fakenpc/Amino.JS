@@ -102,6 +102,11 @@ const wiki = {
     error: 'nothing happend.'
 };
 
+const likeBlog = {
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
 module.exports = {
     blog,
     communityList,
@@ -120,5 +125,6 @@ module.exports = {
         status: 'not ok',
         error: 'Nothing has been done.'
     },
-    communityBlogFeed
+    communityBlogFeed,
+    likeBlog
 };

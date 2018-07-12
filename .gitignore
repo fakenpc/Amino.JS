@@ -66,6 +66,7 @@ testing.js
 
 # env file for local testing
 env.js
+examples/env.js
 
 # OSX stuff
 .DS_Store
