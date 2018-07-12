@@ -73,3 +73,6 @@ examples/env.js
 
 # Ignore Cache Files for c9-WebIDE
 .c9/
+
+# 
+.directory
