@@ -117,6 +117,13 @@ const checkInLottery = {
     error: 'nothing happend.'
 }
 
+const recentUsers = {
+    status: 'not ok',
+    error: 'nothing happend.',
+    userProfileList: [],
+    userProfileCount: 0
+}
+
 module.exports = {
     blog,
     communityList,
@@ -138,5 +145,6 @@ module.exports = {
     communityBlogFeed,
     likeBlog,
     checkIn,
-    checkInLottery
+    checkInLottery,
+    recentUsers
 };

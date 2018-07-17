@@ -107,7 +107,21 @@ module.exports = {
         itemObj.item.likeCount = itemElem.votesCount;
         itemObj.item.commentCount = itemElem.commentsCount;
         return itemObj;
-    }
+    },
+
+    userSorter: (element) => {
+        return {
+            'userId': element.uid,
+            'nickname': element.nickname,
+            'address': element.address,
+            'latitude': element.latitude,
+            'longitude': element.longitude,
+            'level': element.level,
+            'createdTime': element.createdTime,
+            'modifiedTime': element.modifiedTime,
+            'blogsCount': element.blogsCount
+        };
+    },
 };
 
     

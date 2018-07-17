@@ -20,5 +20,6 @@ module.exports = {
     commentWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}/comment`,
     likeBlog: (com, id) => `${prefix}/v1/${com}/s/blog/${id}/vote?cv=1.2&value=4`,
     checkIn: (com) => `${prefix}/v1/${com}/s/check-in`,
-    checkInLottery: (com) => `${prefix}/v1/${com}/s/check-in/lottery`
+    checkInLottery: (com) => `${prefix}/v1/${com}/s/check-in/lottery`,
+    getRecentUsers: (com, start, size) => `${prefix}/v1/${com}/s/user-profile?type=recent&start=${start}&size=${size}`
 };
