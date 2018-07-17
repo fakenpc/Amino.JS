@@ -21,5 +21,6 @@ module.exports = {
     likeBlog: (com, id) => `${prefix}/v1/${com}/s/blog/${id}/vote?cv=1.2&value=4`,
     checkIn: (com) => `${prefix}/v1/${com}/s/check-in`,
     checkInLottery: (com) => `${prefix}/v1/${com}/s/check-in/lottery`,
-    getRecentUsers: (com, start, size) => `${prefix}/v1/${com}/s/user-profile?type=recent&start=${start}&size=${size}`
+    getRecentUsers: (com, start, size) => `${prefix}/v1/${com}/s/user-profile?type=recent&start=${start}&size=${size}`,
+    getOnlineUsers: (com, start, size) => `${prefix}/v1/${com}/s/live-layer?topic=ndtopic:${com}:online-members&start=${start}&size=${size}`
 };
