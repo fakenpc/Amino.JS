@@ -44,5 +44,6 @@ module.exports = {
     likeBlog: require('./modules/likeBlog'), //TEST-CASE: OK
     checkIn: require('./modules/checkIn'), //TEST-CASE: OK
     checkInLottery: require('./modules/checkInLottery'), //TEST-CASE: OK
-    getRecentUsers: require('./modules/getRecentUsers') //TEST-CASE: OK
+    getRecentUsers: require('./modules/getRecentUsers'), //TEST-CASE: OK
+    getOnlineUsers: require('./modules/getOnlineUsers') //TEST-CASE: OK
 }; 

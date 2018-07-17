@@ -6,8 +6,8 @@ const sorter = require('../helpers/sorter');
 module.exports = async function (com, start=0, size=1) {
 
     // get our sid
-    let recentUsers = objs.users;
-    recentUsers.userProfileList = [];
+    let onlineUsers = objs.users;
+    onlineUsers.userProfileList = [];
     let sid = getConfig('sid');
     
     if (typeof sid != 'string' || typeof com !== 'string' || typeof start !== 'number' || typeof size !== 'number') {
@@ -15,7 +15,7 @@ module.exports = async function (com, start=0, size=1) {
     }
     
     try {
-        var result = await request.get(endpoints.getRecentUsers(com, start, size), {
+        var result = await request.get(endpoints.getOnlineUsers(com, start, size), {
             headers: {
                 'NDCAUTH': `sid=${sid}`
             }
@@ -24,14 +24,14 @@ module.exports = async function (com, start=0, size=1) {
         // Parse and return the userProfileList
         jsonUsers = JSON.parse(result);
         jsonUsers.userProfileList.forEach(element => {
-            recentUsers.userProfileList.push(sorter.userSorter(element));
+            onlineUsers.userProfileList.push(sorter.userSorter(element));
         });
-        recentUsers.userProfileCount = jsonUsers.userProfileCount;
-        recentUsers.status = 'ok';
-        recentUsers.error = null;
+        onlineUsers.userProfileCount = jsonUsers.userProfileCount;
+        onlineUsers.status = 'ok';
+        onlineUsers.error = null;
     } catch (err) {
-        recentUsers.error = err;
+        onlineUsers.error = err;
         throw new Error(err);
     }
-    return recentUsers;
+    return onlineUsers;
 };

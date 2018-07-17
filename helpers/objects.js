@@ -117,7 +117,7 @@ const checkInLottery = {
     error: 'nothing happend.'
 }
 
-const recentUsers = {
+const users = {
     status: 'not ok',
     error: 'nothing happend.',
     userProfileList: [],
@@ -146,5 +146,5 @@ module.exports = {
     likeBlog,
     checkIn,
     checkInLottery,
-    recentUsers
+    users
 };
