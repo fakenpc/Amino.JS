@@ -41,5 +41,7 @@ module.exports = {
     createWikiEntry: require('./modules/createWikiEntry'), //TEST-CASE: OK
     deleteWikiEntry: require('./modules/deleteWikiEntry'), //TEST-CASE: OK
     commentWikiEntry: require('./modules/commentWikiEntry'), //TEST-CASE: OK
-    likeBlog: require('./modules/likeBlog') //TEST-CASE: OK
-};
+    likeBlog: require('./modules/likeBlog'), //TEST-CASE: OK
+    checkIn: require('./modules/checkIn'), //TEST-CASE: OK
+    checkInLottery: require('./modules/checkInLottery') //TEST-CASE: OK
+}; 

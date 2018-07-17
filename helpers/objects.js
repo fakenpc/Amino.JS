@@ -107,6 +107,16 @@ const likeBlog = {
     error: 'nothing happend.'
 }
 
+const checkIn = {
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
+const checkInLottery = {
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
 module.exports = {
     blog,
     communityList,
@@ -126,5 +136,7 @@ module.exports = {
         error: 'Nothing has been done.'
     },
     communityBlogFeed,
-    likeBlog
+    likeBlog,
+    checkIn,
+    checkInLottery
 };

@@ -18,5 +18,7 @@ module.exports = {
     createWiki: (com) => `${prefix}/v1/${com}/s/item`,
     deleteWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}`,
     commentWiki: (com, uid) => `${prefix}/v1/${com}/s/item/${uid}/comment`,
-    likeBlog: (com, id) => `${prefix}/v1/${com}/s/blog/${id}/vote?cv=1.2&value=4`
+    likeBlog: (com, id) => `${prefix}/v1/${com}/s/blog/${id}/vote?cv=1.2&value=4`,
+    checkIn: (com) => `${prefix}/v1/${com}/s/check-in`,
+    checkInLottery: (com) => `${prefix}/v1/${com}/s/check-in/lottery`
 };
