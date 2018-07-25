@@ -111,7 +111,7 @@ module.exports = {
 
     userSorter: (element) => {
         return {
-            'userId': element.uid,
+            'uid': element.uid,
             'nickname': element.nickname,
             'address': element.address,
             'latitude': element.latitude,

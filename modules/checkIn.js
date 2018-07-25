@@ -33,6 +33,10 @@ module.exports = async function checkIn(com) {
         if (response['api:message'] == 'OK') {
             checkIn.status = 'ok';
             checkIn.error = null;
+
+            if(response['canPlayLottery']) {
+                checkIn.canPlayLottery = true;
+            }
         } else {
             checkIn.error = response['api:message'];
         }

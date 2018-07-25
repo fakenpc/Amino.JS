@@ -109,6 +109,7 @@ const likeBlog = {
 
 const checkIn = {
     status: 'not ok',
+    canPlayLottery: false,
     error: 'nothing happend.'
 }
 
