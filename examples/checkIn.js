@@ -7,7 +7,12 @@ const Amino = require('../index');
 
     for(const yourCommunity of yourCommunities.coms) {
     	let res = await Amino.checkIn(yourCommunity.id);
-        console.log(res);
+    	console.log(res);
+
+    	if(res.status == 'ok' && res.canPlayLottery) {
+    		let lotteryRes = await Amino.checkInLottery(yourCommunity.id);
+    		console.log(lotteryRes);
+    	}
     }
     
 })();

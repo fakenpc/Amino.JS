@@ -6,7 +6,7 @@ const Amino = require('../index');
 	const yourCommunities = await Amino.getJoinedComs();
 
 	for(const yourCommunity of yourCommunities.coms) {
-		let res = await Amino.checkIn(yourCommunity.id);
+		let res = await Amino.checkInLottery(yourCommunity.id);
 		console.log(res);
 	}
 	
