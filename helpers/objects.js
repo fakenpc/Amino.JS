@@ -107,6 +107,11 @@ const likeBlog = {
     error: 'nothing happend.'
 }
 
+const subscribe = {
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
 const checkIn = {
     status: 'not ok',
     canPlayLottery: false,
@@ -147,5 +152,6 @@ module.exports = {
     likeBlog,
     checkIn,
     checkInLottery,
-    users
+    users,
+    subscribe
 };
