@@ -76,3 +76,6 @@ examples/env.js
 
 # 
 .directory
+
+# private script
+examples/onlineCheat.js

@@ -5,9 +5,8 @@ const sorter = require('../helpers/sorter.js'); //For easier Sorting of various 
 const { getConfig } = require('../index');
 
 /** 
- * Function to like a blog.
+ * Function to checkIn a blog.
  * @param {CommunityUUID} com The Community ID that can be Obtained by the Function getJoinedComs
- * @param {String} id The id of the blog
  * @returns {Object} The raw JSON parsed from Amino API
  */
 
