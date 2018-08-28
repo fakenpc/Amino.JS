@@ -112,6 +112,11 @@ const subscribe = {
     error: 'nothing happend.'
 }
 
+const unsubscribe = {
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
 const checkIn = {
     status: 'not ok',
     canPlayLottery: false,
@@ -172,5 +177,6 @@ module.exports = {
     checkInLottery,
     users,
     subscribe,
+    unsubscribe,
     userProfile
 };
