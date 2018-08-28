@@ -46,5 +46,6 @@ module.exports = {
     checkInLottery: require('./modules/checkInLottery'), //TEST-CASE: OK
     getRecentUsers: require('./modules/getRecentUsers'), //TEST-CASE: OK
     getOnlineUsers: require('./modules/getOnlineUsers'), //TEST-CASE: OK
-    subscribe: require('./modules/subscribe') //TEST-CASE: OK
+    subscribe: require('./modules/subscribe'), //TEST-CASE: OK
+    getUserProfile: require('./modules/getUserProfile') //TEST-CASE: OK
 }; 

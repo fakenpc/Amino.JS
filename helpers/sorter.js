@@ -119,7 +119,9 @@ module.exports = {
             'level': element.level,
             'createdTime': element.createdTime,
             'modifiedTime': element.modifiedTime,
-            'blogsCount': element.blogsCount
+            'blogsCount': element.blogsCount,
+            'membershipStatus': element.membershipStatus,
+            'onlineStatus': element.onlineStatus
         };
     },
 };

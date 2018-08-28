@@ -130,6 +130,24 @@ const users = {
     userProfileCount: 0
 }
 
+const userProfile = {
+    item: {
+        'uid': null,
+        'nickname': null,
+        'address': null,
+        'latitude': null,
+        'longitude': null,
+        'level': null,
+        'createdTime': null,
+        'modifiedTime': null,
+        'blogsCount': null,
+        'membershipStatus': null,
+        'onlineStatus': null
+    },
+    status: 'not ok',
+    error: 'nothing happend.'
+}
+
 module.exports = {
     blog,
     communityList,
@@ -153,5 +171,6 @@ module.exports = {
     checkIn,
     checkInLottery,
     users,
-    subscribe
+    subscribe,
+    userProfile
 };
