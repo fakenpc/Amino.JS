@@ -25,5 +25,6 @@ module.exports = {
     getOnlineUsers: (com, start, size) => `${prefix}/v1/${com}/s/live-layer?topic=ndtopic:${com}:online-members&start=${start}&size=${size}`,
     subscribe: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}/member`,
     unsubscribe: (com, uid, myUid) => `${prefix}/v1/${com}/s/user-profile/${uid}/member/${myUid}`,
-    getUserProfile: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}`
+    getUserProfile: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}`,
+    getUserProfileComments: (com, uid, start, size) => `${prefix}/v1/${com}/s/user-profile/${uid}/comment?sort=newest&start=${start}&size=${size}`
 };
