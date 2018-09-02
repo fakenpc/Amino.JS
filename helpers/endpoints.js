@@ -26,5 +26,6 @@ module.exports = {
     subscribe: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}/member`,
     unsubscribe: (com, uid, myUid) => `${prefix}/v1/${com}/s/user-profile/${uid}/member/${myUid}`,
     getUserProfile: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}`,
-    getUserProfileComments: (com, uid, start, size) => `${prefix}/v1/${com}/s/user-profile/${uid}/comment?sort=newest&start=${start}&size=${size}`
+    getUserProfileComments: (com, uid, start, size) => `${prefix}/v1/${com}/s/user-profile/${uid}/comment?sort=newest&start=${start}&size=${size}`,
+    userProfileComment: (com, uid) => `${prefix}/v1/${com}/s/user-profile/${uid}/comment`
 };
