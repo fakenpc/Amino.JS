@@ -49,5 +49,6 @@ module.exports = {
     subscribe: require('./modules/subscribe'), //TEST-CASE: OK
     unsubscribe: require('./modules/unsubscribe'), //TEST-CASE: OK
     getUserProfile: require('./modules/getUserProfile'), //TEST-CASE: OK
-    getUserProfileComments: require('./modules/getUserProfileComments') //TEST-CASE: OK
+    getUserProfileComments: require('./modules/getUserProfileComments'), //TEST-CASE: OK
+    userProfileComment: require('./modules/userProfileComment') //TEST-CASE: OK
 }; 
